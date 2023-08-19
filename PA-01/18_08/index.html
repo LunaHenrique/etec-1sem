@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algoritmos 18/08</title>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  <p>Escolha a operação que você deseja fazer, então digite os numeros conforme indicado;</p>
+  <button onclick="calcularSoma()">Soma de 2 numeros</button>
+  <button onclick="calcularSubtracao()">Diferença de 2 numeros</button>
+  <button onclick="calcularMultiplicacao()">Produto de 2 numeros</button>
+  <button onclick="calcularDivisao()">Divisão de 2 numeros</button>
+  <button onclick="calcularMedia()">Média de 4 numeros</button>
+  
+  <script>
+    function calcularSoma(){
+      let n1 = window.prompt("Digite o primeiro número a ser somado");
+      let n2 = window.prompt("Digite o segundo número a ser somado");
+      let soma = Number(n1) + Number(n2);
+      alert(n1 + " + " + n2 + " = " + soma);
+      return;
+    }
+    function calcularSubtracao(){
+      let n1 = window.prompt("Digite o minuendo da subtração");
+      let n2 = window.prompt("Digite o subtraendo da subtração");
+      let subtracao = Number(n1) - Number(n2);
+      alert(n1 + " - " + n2 + " = " + subtracao);
+      return;
+    }
+    function calcularMultiplicacao(){
+      let n1 = window.prompt("Digite o primeiro fator");
+      let n2 = window.prompt("Digite o segundo fator");
+      let produto = Number(n1) * Number(n2);
+      alert(n1 + " * " + n2 + " = " + produto);
+      return;
+    }
+    function calcularDivisao(){
+      let n1 = window.prompt("Digite o dividendo");
+      let n2 = window.prompt("Digite o divisor");
+      let quociente = Number(n1) / Number(n2);
+      alert(n1 + " / " + n2 + " = " + quociente);
+      return;
+    }
+    function calcularMedia(){
+      let n1 = window.prompt("Digite o primeiro termo");
+      let n2 = window.prompt("Digite o segundo termo");
+      let n3 = window.prompt("Digite o terceiro termo");
+      let n4 = window.prompt("Digite o quarto termo");
+      let media = (Number(n1) + Number(n2) + Number(n3) + Number(n4)) / 4;
+      alert(n1 + " + " + n2 + " + " + n3 + " + " + n4 + " = " + media);
+      return;
+    }
+  </script>
+</body>
+</html>

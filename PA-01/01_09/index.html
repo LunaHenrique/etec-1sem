@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios de comparação</title>
+</head>
+<body>
+<button onclick="exercicio01()">01</button>
+<button onclick="exercicio02()">02</button>
+<button onclick="exercicio03()">03</button>
+<button onclick="exercicio04()">04</button>
+<button onclick="exercicio05()">05</button>
+<button onclick="exercicio06()">06</button>
+<script>
+  function exercicio01(){
+    let n = window.prompt("Digita o numero ai");
+    if (n<0){
+      alert(n+" é menor que 0.");
+    } else if (n==0){
+      alert(n+" é 0, obviamente.");
+    } else {
+      alert(n+" é maior que 0.");
+    }
+  }
+  function exercicio02(){
+    let n = window.prompt("Digite o número do dia da semana. Exemplo: Domingo = 1, Segunda = 2...");
+    switch (Number(n)){
+      case 1:
+        alert("Domingo");
+        break;
+      case 2:
+        alert("Segunda");
+        break;
+      case 3:
+        alert("Terça");
+        break;
+      case 4:
+        alert("Quarta");
+        break;
+      case 5:
+        alert("Quinta");
+        break;
+      case 6:
+        alert("Sexta");
+        break;     
+      case 7:
+        alert("Sábado");
+        break;
+      default:
+        alert("Não tem dia numero "+n+" na minha semana;");
+        break;
+    }
+  }
+  function exercicio03(){
+    let n1 = window.prompt("Digite se o primeiro valor é verdadeiro ou falso. Termos válidos: Sim, S, Yes, Y, Verdadeiro, V, True, T. Qualquer outro será considerado falso");
+    let n2 = window.prompt("Digite se o primeiro valor é verdadeiro ou falso. Termos válidos: Sim, S, Yes, Y, Verdadeiro, V, True, T. Qualquer outro será considerado falso");
+    n1 = (n1 == "Sim" || n1 == "S" || n1 == "Yes" || n1 == "Y" || n1 == "Verdadeiro" || n1 == "V" || n1 == "True" || n1 == "T");
+    n2 = (n2 == "Sim" || n2 == "S" || n2 == "Yes" || n2 == "Y" || n2 == "Verdadeiro" || n2 == "V" || n2 == "True" || n2 == "T");
+    alert("O primeiro foi "+n1+" e o segundo foi "+n2);
+  }
+  function exercicio04(){
+    let n1 = window.prompt("Digite o nome de usuário cadastrado");
+    if (n1 == "JuninDoPlay") {
+      let n2 = window.prompt("Digite a senha");
+      if (n2 == "Jujubinha123") {
+        alert("Bem vindo JuninDoPlay");        
+      } else {
+        alert("Essa não é a senha de JuninDoPlay, pare de tentar invadir a conta dos outros")
+      }
+    } else {
+      alert("Este nome de usuário não esta cadastrado");
+    }
+  }
+  function exercicio05(){
+    let n1 = window.prompt("Digite seu peso em Kg");
+    let n2 = window.prompt("Digite sua altura em Metros");
+    n1 = n1 / (n2 ^ 2);
+    alert(n1);
+    if (n1 < 18.5) {
+      alert("Seu IMC é "+n1+", portanto você está abaixo do peso.")
+    } else if (n1 < 25) {
+      alert("Seu IMC é "+n1+", portanto você está no peso ideal.")
+    } else if (n1 < 30) {
+      alert("Seu IMC é "+n1+", portanto você está acima do peso.")
+    } else {
+      alert("Seu IMC é "+n1+", portanto você está acima do peso, na faixa da obesidade.")
+    }
+  }
+  function exercicio06(){
+    let mat = window.prompt("Digite o número de matricula do aluno");
+    let n1 = window.prompt("Digite a primeira nota do aluno 0-100");
+    let n2 = window.prompt("Digite a segunda nota do aluno 0-100");
+    let n3 = window.prompt("Digite a terceira nota do aluno 0-100");
+    let media = (Number(n1) + Number(n2) + Number(n3)) / 3;
+    let aproveitamento;
+    if (media < 40){
+      aproveitamento = "E";
+    } else if (media < 60){
+      aproveitamento = "D";
+    } else if (media < 75){
+      aproveitamento = "C";
+    } else if (media < 90){
+      aproveitamento = "B";
+    } else {
+      aproveitamento = "A";
+    }
+    let passou;
+    alert("Para o(a) aluno(a) com a matricula " + mat + "\n Suas notas são: "+n1+", "+n2+", "+n3+";\nSua média é "+media+";\nSua média de aproveitamento é: "+aproveitamento+"O(a) Aluno(a) está")
+  }
+</script>
+</body>
+</html>

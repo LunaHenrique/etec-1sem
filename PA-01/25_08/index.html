@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de aluno</title>
+</head>
+<body>
+<button onclick="avaliarAluno()">Começar avaliação</button>
+
+<script>
+  function avaliarAluno(){
+    let n1 = window.prompt("Digite a primeira nota");
+    let n2 = window.prompt("Digite a segunda nota");
+    let n3 = window.prompt("Digite a terceira nota");
+    let n4 = window.prompt("Digite a quarta nota");
+    let media = (Number(n1) + Number(n2) + Number(n3) + Number(n4)) / 4;
+    alert("A média do(a) aluno(a) é: " + media);
+    if (media < 5) {
+      alert ("Portanto está reprovado(a)")
+    } else if (media >= 5 && media < 8){
+      alert ("Portanto está em recuperação")
+    } else {
+      alert ("Portanto está aprovado(a)")
+    }
+    return;
+  }
+</script>
+</body>
+</html>

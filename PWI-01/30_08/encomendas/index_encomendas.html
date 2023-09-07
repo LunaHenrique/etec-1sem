@@ -19,11 +19,11 @@
   <h2>Encomendar Bolo</h2>
   <form action="" method="get">
     <label for="usr_nome">Nome:</label>
-    <input id="usr_nome" name="usr_nome" type="text" placeholder="Informe o nome">
+    <input autofocus id="usr_nome" name="usr_nome" type="text" placeholder="Informe o nome" maxlength="35">
     <label for="usr_ddd">DDD:</label>
-    <input id="usr_ddd" name="usr_ddd" type="text" placeholder="DDD">
+    <input id="usr_ddd" name="usr_ddd" type="number" placeholder="DDD" min="11" max="99" size="2">
     <label for="usr_tel">Telefone:</label>
-    <input id="usr_tel" name="usr_tel" type="tel" placeholder="Telefone">
+    <input id="usr_tel" name="usr_tel" type="tel" placeholder="Telefone" maxlength="10" size="10">
     <br>
     <table>
       <caption>Bolos</caption>
@@ -40,12 +40,28 @@
     </table>
     <br>
     <label for="enc_sabor">Sabor:</label>
-    <select id="enc_sabor" name="enc_sabor" type="" placeholder="Informe o nome">
-      <option></option>
+    <select id="enc_sabor" name="enc_sabor">
+      <option selected disabled>Escolha...</option>
+      <option value="chocolate">Chocolate</option>
+      <option value="frutas">Frutas</option>
+      <option value="misto">Misto</option>
     </select>
+    <input type="radio" id="simples" name="tipo_bolo" value="simples">
+    <label for="simples">Simples</label>
+    <input type="radio" id="decorado" name="tipo_bolo" value="decorado">
+    <label for="decorado">Decorado</label>
+    <br><br>
+    <label for="enc_tam">Tamanho:</label>
+    <input id="enc_tam" name="enc_tam" type="number" max="10">
+    <label for="enc_tam">Kg</label>
+    <input type="checkbox" id="enc_diet" name="enc_diet">
+    <label for="decorado">Diet?</label>
+    <br><br>
+    <label for="enc_obs">Observações:</label> <br>
+    <textarea id="enc_obs" name="enc_obs" rows="3" cols="80" placeholder="Observações sobre o pedido"></textarea>
+    <br><br>
+    <input type="submit" value="Enviar Pedido"> <input type="reset" value="Limpar">
 
-    <label for="enc_sabor">Nome:</label>
-    <input id="enc_sabor" name="enc_sabor" type="text" placeholder="Informe o nome">
   </form>
 </main>
 

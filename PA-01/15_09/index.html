@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios de laço</title>
+</head>
+<body>
+<h1>Exercicios de laço</h1>
+<ol>
+    <li>
+        <button onclick="exercicio01()">Iniciar</button>
+        Liste números maiores que 1 e menores que 11 e escreva seu nome ao lado da variável;
+    </li>
+    <li>
+        <button onclick="exercicio02()">Iniciar</button>
+        Liste números menores que 10 até 2 e escreva seu nome ao lado da variável;
+    </li>
+    <li>
+        <button onclick="exercicio03()">Iniciar</button>
+        Liste os números pares menores que 100;
+    </li>
+    <li>
+        <button onclick="exercicio04()">Iniciar</button>
+        Liste os números ímpares menores que 100;
+    </li>
+    <li>
+        <button onclick="exercicio05()">Iniciar</button>
+        Liste os números da tabuada do 2;
+    </li>
+    <li>
+        <button onclick="exercicio06()">Iniciar</button>
+        Liste os números da tabuada do 10;
+    </li>
+</ol>
+<p>Todas as saidas vão para o console do navegador</p>
+<script>
+    function exercicio01(){
+        console.log("Inicio do exercicio 1");
+        for ( n=1; n < 11; n++){
+            console.log(n + " - Lucas Henrique");
+        }
+        console.log("Fim do exercicio 1");
+        return;
+    }
+    function exercicio02(){
+        console.log("Inicio do exercicio 2");
+        for ( n=9; n >= 2 ; n--){
+            console.log(n + " - Lucas Henrique");
+        }
+        console.log("Fim do exercicio 2");
+        return;
+    }
+    function exercicio03(){
+        console.log("Inicio do exercicio 3");
+        for ( n=0; n < 100 ; n++){
+            if (n % 2 == 0){
+                console.log(n + " - Lucas Henrique");
+            }
+        }
+        console.log("Fim do exercicio 3");
+        return;
+    }
+    function exercicio04(){
+        console.log("Inicio do exercicio 4");
+        for ( n=0; n < 100 ; n++){
+            if (n % 2 == 1){
+                console.log(n + " - Lucas Henrique");
+            }
+        }
+        console.log("Fim do exercicio 4");
+        return;
+    }
+    function exercicio05(){
+        console.log("Inicio do exercicio 5");
+        for ( n=0; n <= 10; n++){
+            console.log("2 vezes " + n + " é igual a "+ n*2 + " - Lucas Henrique");
+        }
+        console.log("Fim do exercicio 5");
+        return;
+    }
+    function exercicio06(){
+        console.log("Inicio do exercicio 6");
+        for ( n=0; n <= 10; n++){
+            console.log("10 vezes " + n + " é igual a "+ n*10 + " - Lucas Henrique");
+        }
+        console.log("Fim do exercicio 6");
+        return;
+    }
+</script>
+</body>
+</html>

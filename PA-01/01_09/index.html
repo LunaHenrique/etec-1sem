@@ -6,12 +6,34 @@
   <title>Exercicios de comparação</title>
 </head>
 <body>
-<button onclick="exercicio01()">01</button>
-<button onclick="exercicio02()">02</button>
-<button onclick="exercicio03()">03</button>
-<button onclick="exercicio04()">04</button>
-<button onclick="exercicio05()">05</button>
-<button onclick="exercicio06()">06</button>
+  <h1>Exercicios de comparação</h1>
+  <ol>
+    <li>
+        <button onclick="exercicio01()">Iniciar</button>
+        Determinar se um número é positivo, negativo ou zero e exibir mensagem.
+    </li>
+    <li>
+        <button onclick="exercicio02()">Iniciar</button>
+        Determinar o dia da semana com base no número do dia da semana (onde 1 é domingo e 7 é sábado):
+    </li>
+    <li>
+        <button onclick="exercicio03()">Iniciar</button>
+        Escreva um algoritmo que lê dois valores booleanos (lógicos) e então determina se ambos são VERDADEIROS ou FALSOS.
+    </li>
+    <li>
+        <button onclick="exercicio04()">Iniciar</button>
+        Vamos verificar o nome de usuário, a senha e se o usuário está correto:
+    </li>
+    <li>
+        <button onclick="exercicio05()">Iniciar</button>
+        Calculo IMC;
+    </li>
+    <li>
+        <button onclick="exercicio06()">Iniciar</button>
+        O algoritmo deve escrever o número do aluno, suas notas, a média dos exercícios,
+        a média de aproveitamento, o conceito correspondente e a mensagem 'Aprovado' se o conceito for A, B ou C, e 'Reprovado' se o conceito for D ou E.
+    </li>
+</ol>
 <script>
   function exercicio01(){
     let n = window.prompt("Digita o numero ai");
@@ -25,31 +47,22 @@
   }
   function exercicio02(){
     let n = window.prompt("Digite o número do dia da semana. Exemplo: Domingo = 1, Segunda = 2...");
-    switch (Number(n)){
-      case 1:
-        alert("Domingo");
-        break;
-      case 2:
-        alert("Segunda");
-        break;
-      case 3:
-        alert("Terça");
-        break;
-      case 4:
-        alert("Quarta");
-        break;
-      case 5:
-        alert("Quinta");
-        break;
-      case 6:
-        alert("Sexta");
-        break;     
-      case 7:
-        alert("Sábado");
-        break;
-      default:
-        alert("Não tem dia numero "+n+" na minha semana;");
-        break;
+    if(n==1){
+      alert("É domingo");
+    } else if(n==2){
+      alert("É segunda");
+    } else if(n==3){
+      alert("É terça");
+    } else if(n==4){
+      alert("É quarta");
+    } else if(n==5){
+      alert("É quinta");
+    } else if(n==6){
+      alert("É sexta");
+    } else if(n==7){
+      alert("É sábado");
+    } else {
+      alert("Não sei que dia é esse");
     }
   }
   function exercicio03(){
@@ -73,18 +86,20 @@
     }
   }
   function exercicio05(){
-    let n1 = window.prompt("Digite seu peso em Kg");
-    let n2 = window.prompt("Digite sua altura em Metros");
-    n1 = n1 / (n2 ^ 2);
+    let n1 = Number(window.prompt("Digite seu peso em Kg"));
+    let n2 = Number(window.prompt("Digite sua altura em Metros"));
     alert(n1);
-    if (n1 < 18.5) {
-      alert("Seu IMC é "+n1+", portanto você está abaixo do peso.")
-    } else if (n1 < 25) {
-      alert("Seu IMC é "+n1+", portanto você está no peso ideal.")
-    } else if (n1 < 30) {
-      alert("Seu IMC é "+n1+", portanto você está acima do peso.")
+    alert(n2);
+    let imc = (n1 / (n2 ** 2));
+    alert(imc);
+    if (imc < 18.5) {
+      alert("Seu IMC é "+parseFloat(imc)+", portanto você está abaixo do peso.")
+    } else if (imc < 25) {
+      alert("Seu IMC é "+parseFloat(imc)+", portanto você está no peso ideal.")
+    } else if (imc < 30) {
+      alert("Seu IMC é "+parseFloat(imc)+", portanto você está acima do peso.")
     } else {
-      alert("Seu IMC é "+n1+", portanto você está acima do peso, na faixa da obesidade.")
+      alert("Seu IMC é "+parseFloat(imc)+", portanto você está acima do peso, na faixa da obesidade.")
     }
   }
   function exercicio06(){
@@ -106,7 +121,12 @@
       aproveitamento = "A";
     }
     let passou;
-    alert("Para o(a) aluno(a) com a matricula " + mat + "\n Suas notas são: "+n1+", "+n2+", "+n3+";\nSua média é "+media+";\nSua média de aproveitamento é: "+aproveitamento+"O(a) Aluno(a) está")
+    if(aproveitamento== "E" || aproveitamento == "D" ){
+      passou = "Reprovado"
+    } else {
+      passou = "Aprovado"
+    }
+    alert("Para o(a) aluno(a) com a matricula " + mat + "\n Suas notas são: "+n1+", "+n2+", "+n3+";\nSua média é "+media+";\nSua média de aproveitamento é: "+aproveitamento+", portanto o(a) Aluno(a) está "+passou)
   }
 </script>
 </body>

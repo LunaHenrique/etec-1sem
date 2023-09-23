@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios DO WHILE</title>
+</head>
+<body>
+    <h1>Exercícios de "Do While" - 22/09</h1>
+    <h3>Por: Lucas Henrique</h3>
+    <ol>
+        <li>
+            <button onclick="exercicio01()">Iniciar</button>
+            <p>Criar um algoritmo utilizando o operador lógico DO WHILE onde o salário inicie com R$ 1.000,00 e acrescente R$ 100,00 até chegar em R$ 5.000,00. Visualizar linha por linha os acréscimos no browser.</p>
+        </li>
+        <li>
+            <button onclick="exercicio02()">Iniciar</button>
+            <p> Criar um algoritmo utilizando o operador DO WHILE onde inicie o salário com R$ 10.000,00 e decrescente em R$ 100,00 até chegar em R$ 1,00. Visualizar linha por linha os decréscimos no browser. (Considerei como chegar a R$ 0,00) </p>
+        </li>
+    </ol>
+    <p>Output no console do navegador</p>
+    <script>
+        function exercicio01(){
+            let i = 1000;
+            do{
+                console.log("O salario é R$ "+i+",00");
+                i += 100;
+            } while (i <= 5000);
+        }
+        function exercicio02(){
+            let i = 10000;
+            do{
+                console.log("O salario é R$ "+i+",00");
+                i -= 100;
+            } while (i >= 0);
+        }
+    </script>
+</body>
+</html>

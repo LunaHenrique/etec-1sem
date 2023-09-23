@@ -1,0 +1,78 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+main{
+    background-color: maroon;
+    background-size:auto;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+aside{
+    background-image:url(../Capas/vinho.jpg);
+    background-size:cover;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+h1{
+    color: whitesmoke;
+    font-style: italic;
+    text-transform: uppercase;
+    border: 2px dotted mistyrose;
+}
+h3{
+    color: whitesmoke;
+}
+main h3{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+aside h3{
+    color: maroon;
+    background-image: url(../Capas/fundo.jpg);
+}
+ol{
+    color: lightgray;
+    font-size: 10pt;
+    font-weight: bold;
+    list-style-image: url(../Capas/check.png);
+    text-align: left;
+}
+span{
+    color: gold;
+    text-decoration: underline;
+}
+table{
+    margin: auto;
+}
+td{
+    border: 3px dashed indianred;
+    padding: 0;
+    width: 10vw;
+    height: 30vh;
+}
+img{
+    transition: transform 0.5s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+h1:hover{
+    background-color: crimson;
+    color: lightpink;
+    border-color: lightpink;
+}
+h3:hover{
+    color: indianred;
+}
+img:hover{
+    transform: rotate(-5deg);
+    border: 5px double gold;
+}
